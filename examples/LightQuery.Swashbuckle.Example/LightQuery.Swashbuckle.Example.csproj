@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\LightQuery.EntityFrameworkCore\LightQuery.EntityFrameworkCore.csproj" />
-      <ProjectReference Include="..\..\src\LightQuery.Swashbuckle\LightQuery.Swashbuckle.csproj" />
+        <PackageReference Include="LightQuery" Version="1.9.0-beta0012" />
+        <PackageReference Include="LightQuery.EntityFrameworkCore" Version="1.9.0-beta0012" />
+        <PackageReference Include="LightQuery.Swashbuckle" Version="1.9.0-beta0012" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
     </ItemGroup>
 
     <ItemGroup>

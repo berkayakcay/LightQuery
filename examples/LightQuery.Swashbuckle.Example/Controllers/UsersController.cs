@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LightQuery.Client;
-using LightQuery.EntityFrameworkCore;
 using LightQuery.Swashbuckle.Example.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -27,7 +26,7 @@ namespace LightQuery.Swashbuckle.Example.Controllers
         }
 
         [HttpGet]
-        [AsyncLightQuery(forcePagination: true, defaultPageSize: 3, defaultSort: "columnName desc")]
+        [LightQuery(forcePagination: true, defaultPageSize: 3, defaultSort: "columnName desc")]
         [ProducesResponseType(typeof(PaginationResult<User>), 200)]
         public async Task<IActionResult> Get()
         {
