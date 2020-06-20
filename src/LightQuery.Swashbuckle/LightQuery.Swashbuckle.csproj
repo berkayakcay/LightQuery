@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netcoreapp3.0;netstandard2.0;net461</TargetFrameworks>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <Authors>Georg Dangl</Authors>
+        <Authors>Georg Dangl, Berkay AKÇAY</Authors>
         <Company />
         <Description>Extensions to use LightQuery with Swashbuckle</Description>
         <Copyright>(c) $([System.DateTime]::Now.Year) Georg Dangl</Copyright>
@@ -14,7 +14,10 @@
         <PackageTags>Asp-Net-Core Querying Sorting Filtering</PackageTags>
         <PackageIcon>gd_icon_256.png</PackageIcon>
         <SignAssembly>true</SignAssembly>
-        <!--        <AssemblyOriginatorKeyFile>LightQuery.Swashbuckle.snk</AssemblyOriginatorKeyFile>-->
+        <AssemblyOriginatorKeyFile>LightQuery.Swashbuckle.snk</AssemblyOriginatorKeyFile>
+        <!-- This is required, otherwise Swashbuckle would try to generate OpenApi Documents on build
+             See: https://github.com/domaindrivendev/Swashbuckle/issues/1358 -->
+        <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
     </PropertyGroup>
 
     <ItemGroup>
